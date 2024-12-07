@@ -75,3 +75,5 @@ crashlytics-build.properties
 /Stalker/Logs
 /Stalker/Temp
 /Stalker/_Library
+/Client/Library
+/Client/Temp
