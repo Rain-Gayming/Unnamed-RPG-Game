@@ -63,6 +63,8 @@ namespace RainGayming.UI
                     break;
             }
 
+            newSize.x = Mathf.Clamp(newSize.x, 100, 1920);
+            newSize.y = Mathf.Clamp(newSize.y, 100, 1080);
             rectTransform.sizeDelta = newSize;
         }
 
