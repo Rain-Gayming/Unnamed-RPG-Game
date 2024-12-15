@@ -6,6 +6,7 @@ namespace RainGayming.Saving
     public class SaveManager : MonoBehaviour
     {
         public NonCharacterSaveData saveData;
+        public NonCharacterSaveData defaultData;
         public static SaveManager instance;
 
         public void Awake()
@@ -27,12 +28,27 @@ namespace RainGayming.Saving
             File.WriteAllText(filePath, json);
         }
 
+        public void DefaultSave()
+        {
+            string json = JsonUtility.ToJson(defaultData, true);
+            string filePath = Application.persistentDataPath + "/SaveData.json";
+            File.WriteAllText(filePath, json);
+        }
+
         public void LoadData()
         {
             string filePath = Application.persistentDataPath + "/SaveData.json";
-            string savedData = File.ReadAllText(filePath);
+            if (File.Exists(filePath))
+            {
+                string savedData = File.ReadAllText(filePath);
 
-            saveData = JsonUtility.FromJson<NonCharacterSaveData>(savedData);
+                saveData = JsonUtility.FromJson<NonCharacterSaveData>(savedData);
+            }
+            else
+            {
+                DefaultSave();
+                LoadData();
+            }
         }
     }
 }

@@ -50,21 +50,5 @@ namespace RainGayming.UI
                 SaveManager.instance.SaveData();
             }
         }
-        public override void OnEndDrag(PointerEventData eventData)
-        {
-            switch (menu.menuType)
-            {
-                case MenuType.map:
-                    break;
-                case MenuType.inventory:
-                    SaveManager.instance.saveData.uiData.inventoryPosition = rectTransform.position;
-                    SaveManager.instance.saveData.uiData.inventoryScale = rectTransform.sizeDelta;
-                    break;
-                case MenuType.status:
-                    break;
-                case MenuType.magic:
-                    break;
-            }
-        }
     }
 }
