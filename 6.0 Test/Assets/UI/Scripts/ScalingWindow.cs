@@ -17,21 +17,10 @@ namespace RainGayming.UI
         southWest,
         west,
     }
-    public class ScalingWindow : MonoBehaviour, IDragHandler, IEndDragHandler
+    public class ScalingWindow : PlayerControlledWindow
     {
-        public MenuType menuType;
-        public Canvas canvas;
-        public RectTransform canvasRect;
-        public RectTransform rectTransform;
-        public DragDirection scaleDirection;
 
-        private void Start()
-        {
-            canvas = GetComponentInParent<Canvas>();
-            canvasRect = canvas.GetComponent<RectTransform>();
-        }
-
-        public void OnDrag(PointerEventData eventData)
+        public override void OnDrag(PointerEventData eventData)
         {
             Vector2 newSize = new Vector2(rectTransform.sizeDelta.x, rectTransform.sizeDelta.y);
             Vector2 newPos = new Vector2(rectTransform.position.x, rectTransform.position.y);
@@ -81,13 +70,9 @@ namespace RainGayming.UI
             SaveManager.instance.SaveData();
         }
 
-        private void Update()
+        public override void OnEndDrag(PointerEventData eventData)
         {
-        }
-
-        public void OnEndDrag(PointerEventData eventData)
-        {
-            switch (menuType)
+            switch (menu.menuType)
             {
                 case MenuType.map:
                     break;

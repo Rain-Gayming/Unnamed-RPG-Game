@@ -1,6 +1,6 @@
 
 [System.Serializable]
-public class SaveData
+public class NonCharacterSaveData
 {
     public UIData uiData;
 }

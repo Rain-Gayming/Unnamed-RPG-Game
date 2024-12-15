@@ -88,9 +88,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30628ac0e66e6374687d06091c63252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
+  menuManager: {fileID: 0}
+  menu: {fileID: 219748164408644091}
   canvas: {fileID: 0}
-  canvasRect: {fileID: 0}
+  canvasRect: {fileID: 1474179060113483203}
   rectTransform: {fileID: 1474179060113483203}
   scaleDirection: 2
 --- !u!1 &520552322083640741
@@ -181,9 +182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30628ac0e66e6374687d06091c63252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
+  menuManager: {fileID: 0}
+  menu: {fileID: 219748164408644091}
   canvas: {fileID: 0}
-  canvasRect: {fileID: 0}
+  canvasRect: {fileID: 1474179060113483203}
   rectTransform: {fileID: 1474179060113483203}
   scaleDirection: 3
 --- !u!1 &2753087539890458677
@@ -274,9 +276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30628ac0e66e6374687d06091c63252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
+  menuManager: {fileID: 0}
+  menu: {fileID: 219748164408644091}
   canvas: {fileID: 0}
-  canvasRect: {fileID: 0}
+  canvasRect: {fileID: 1474179060113483203}
   rectTransform: {fileID: 1474179060113483203}
   scaleDirection: 0
 --- !u!1 &4417128860716466349
@@ -367,10 +370,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60edc3217c6b42f4194722e3c29d0ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
+  menuManager: {fileID: 0}
+  menu: {fileID: 219748164408644091}
   canvas: {fileID: 0}
-  canvasRect: {fileID: 0}
+  canvasRect: {fileID: 1474179060113483203}
   rectTransform: {fileID: 1474179060113483203}
+  scaleDirection: 0
 --- !u!1 &4594665299574904630
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1474179060113483203}
+  - component: {fileID: 219748164408644091}
   m_Layer: 5
   m_Name: DragableScalableMenu
   m_TagString: Untagged
@@ -416,6 +422,21 @@ RectTransform:
   m_AnchoredPosition: {x: 14.991028, y: 15}
   m_SizeDelta: {x: 1436.209, y: 560}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &219748164408644091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594665299574904630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34faaaa008959044da9d8ead035aed8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuType: 0
+  canvas: {fileID: 0}
+  rect: {fileID: 1474179060113483203}
 --- !u!1 &5100621080808902194
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,9 +525,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30628ac0e66e6374687d06091c63252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
+  menuManager: {fileID: 0}
+  menu: {fileID: 219748164408644091}
   canvas: {fileID: 0}
-  canvasRect: {fileID: 0}
+  canvasRect: {fileID: 1474179060113483203}
   rectTransform: {fileID: 1474179060113483203}
   scaleDirection: 5
 --- !u!1 &5638411827888232249
@@ -568,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -672,9 +694,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30628ac0e66e6374687d06091c63252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
+  menuManager: {fileID: 0}
+  menu: {fileID: 219748164408644091}
   canvas: {fileID: 0}
-  canvasRect: {fileID: 0}
+  canvasRect: {fileID: 1474179060113483203}
   rectTransform: {fileID: 1474179060113483203}
   scaleDirection: 7
 --- !u!1 &6324187615557736762
@@ -765,9 +788,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30628ac0e66e6374687d06091c63252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
+  menuManager: {fileID: 0}
+  menu: {fileID: 219748164408644091}
   canvas: {fileID: 0}
-  canvasRect: {fileID: 0}
+  canvasRect: {fileID: 1474179060113483203}
   rectTransform: {fileID: 1474179060113483203}
   scaleDirection: 6
 --- !u!1 &7149384497557822474
@@ -858,9 +882,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30628ac0e66e6374687d06091c63252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
+  menuManager: {fileID: 0}
+  menu: {fileID: 219748164408644091}
   canvas: {fileID: 0}
-  canvasRect: {fileID: 0}
+  canvasRect: {fileID: 1474179060113483203}
   rectTransform: {fileID: 1474179060113483203}
   scaleDirection: 1
 --- !u!1 &8644266162332836139
@@ -951,8 +976,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30628ac0e66e6374687d06091c63252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
+  menuManager: {fileID: 0}
+  menu: {fileID: 219748164408644091}
   canvas: {fileID: 0}
-  canvasRect: {fileID: 0}
+  canvasRect: {fileID: 1474179060113483203}
   rectTransform: {fileID: 1474179060113483203}
   scaleDirection: 4

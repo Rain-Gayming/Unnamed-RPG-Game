@@ -5,21 +5,10 @@ using UnityEngine.Rendering;
 
 namespace RainGayming.UI
 {
-    public class DragableWindow : MonoBehaviour, IDragHandler, IEndDragHandler
+    public class DragableWindow : PlayerControlledWindow
     {
-        public MenuType menuType;
-        public Canvas canvas;
-        public RectTransform canvasRect;
-        public RectTransform rectTransform;
-
         PointerEventData eventDataStore;
-        private void Start()
-        {
-            canvas = GetComponentInParent<Canvas>();
-            canvasRect = canvas.GetComponent<RectTransform>();
-        }
-
-        public void OnDrag(PointerEventData eventData)
+        public override void OnDrag(PointerEventData eventData)
         {
             eventDataStore = eventData;
             rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
@@ -61,10 +50,9 @@ namespace RainGayming.UI
                 SaveManager.instance.SaveData();
             }
         }
-        public void OnEndDrag(PointerEventData eventData)
+        public override void OnEndDrag(PointerEventData eventData)
         {
-            eventDataStore = null;
-            switch (menuType)
+            switch (menu.menuType)
             {
                 case MenuType.map:
                     break;
