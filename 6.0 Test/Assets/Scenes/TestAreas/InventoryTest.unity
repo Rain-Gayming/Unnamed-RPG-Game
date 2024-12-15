@@ -644,6 +644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1187280777}
+  - component: {fileID: 1187280779}
   - component: {fileID: 1187280778}
   m_Layer: 0
   m_Name: GameObject
@@ -680,6 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveData:
+    gameVersion: 
     uiData:
       mapPosition: {x: 410, y: 575}
       mapScale: {x: 1500, y: 490}
@@ -690,6 +692,7 @@ MonoBehaviour:
       magicPosition: {x: 1450, y: 15}
       magicScale: {x: 455, y: 560}
   defaultData:
+    gameVersion: 
     uiData:
       mapPosition: {x: 410, y: 575}
       mapScale: {x: 1495, y: 490}
@@ -697,8 +700,21 @@ MonoBehaviour:
       inventoryScale: {x: 1435, y: 560}
       statusPosition: {x: 15, y: 575}
       statusScale: {x: 395, y: 490}
-      magicPosition: {x: 1495, y: 15}
+      magicPosition: {x: 1450, y: 15}
       magicScale: {x: 455, y: 560}
+--- !u!114 &1187280779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187280775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8113359bbe8d4469228ccba5855d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameVersion: 0.0.0.1a
 --- !u!224 &1440391772 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1474179060113483203, guid: b95e8a4ff6e65964b9a8ca230ed8da18, type: 3}

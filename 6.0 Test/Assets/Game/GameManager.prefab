@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3284770758949019756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9075202091345304550}
+  - component: {fileID: 3773609141261854498}
+  - component: {fileID: 3698870366108627303}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9075202091345304550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284770758949019756}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.482976, y: 549.99524, z: -0.116099566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3773609141261854498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284770758949019756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8113359bbe8d4469228ccba5855d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameVersion: 0.0.0.1a
+--- !u!114 &3698870366108627303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284770758949019756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b614117c242c649ade30727aa146ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveData:
+    gameVersion: 
+    uiData:
+      mapPosition: {x: 410, y: 575}
+      mapScale: {x: 1500, y: 490}
+      inventoryPosition: {x: 15, y: 575}
+      inventoryScale: {x: 15, y: 575}
+      statusPosition: {x: 575, y: 15}
+      statusScale: {x: 395, y: 490}
+      magicPosition: {x: 1450, y: 15}
+      magicScale: {x: 455, y: 560}
+  defaultData:
+    gameVersion: 
+    uiData:
+      mapPosition: {x: 410, y: 575}
+      mapScale: {x: 1495, y: 490}
+      inventoryPosition: {x: 15, y: 15}
+      inventoryScale: {x: 1435, y: 560}
+      statusPosition: {x: 15, y: 575}
+      statusScale: {x: 395, y: 490}
+      magicPosition: {x: 1450, y: 15}
+      magicScale: {x: 455, y: 560}

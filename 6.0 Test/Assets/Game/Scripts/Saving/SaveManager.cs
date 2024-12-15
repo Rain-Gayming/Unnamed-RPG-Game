@@ -1,4 +1,5 @@
 using System.IO;
+using RainGayming.Game;
 using UnityEngine;
 
 namespace RainGayming.Saving
@@ -30,6 +31,7 @@ namespace RainGayming.Saving
 
         public void DefaultSave()
         {
+            defaultData.gameVersion = GameManager.instance.gameVersion;
             string json = JsonUtility.ToJson(defaultData, true);
             string filePath = Application.persistentDataPath + "/SaveData.json";
             File.WriteAllText(filePath, json);
@@ -43,6 +45,13 @@ namespace RainGayming.Saving
                 string savedData = File.ReadAllText(filePath);
 
                 saveData = JsonUtility.FromJson<NonCharacterSaveData>(savedData);
+
+                if (saveData.gameVersion != GameManager.instance.gameVersion)
+                {
+                    print("[SAVE ISSUE] game version isnt the newest version");
+                    DefaultSave();
+                    LoadData();
+                }
             }
             else
             {
