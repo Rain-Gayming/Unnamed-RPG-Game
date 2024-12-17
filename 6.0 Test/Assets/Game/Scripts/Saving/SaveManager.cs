@@ -18,7 +18,10 @@ namespace RainGayming.Saving
             }
 
             instance = this;
+        }
 
+        private void Start()
+        {
             LoadData();
         }
 
@@ -46,6 +49,8 @@ namespace RainGayming.Saving
 
                 saveData = JsonUtility.FromJson<NonCharacterSaveData>(savedData);
 
+                print(saveData);
+                print(GameManager.instance);
                 if (saveData.gameVersion != GameManager.instance.gameVersion)
                 {
                     print("[SAVE ISSUE] game version isnt the newest version");
