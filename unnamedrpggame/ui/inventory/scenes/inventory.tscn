@@ -1,0 +1,752 @@
+[gd_scene load_steps=3 format=3 uid="uid://y6volqeh44bh"]
+
+[ext_resource type="PackedScene" uid="uid://b25i31r51qafw" path="res://ui/controllable_ui/scenes/controlable_menu.tscn" id="1_uwwsr"]
+[ext_resource type="Script" path="res://ui/variable_grid_columns.gd" id="2_hw0o6"]
+
+[node name="inventory" instance=ExtResource("1_uwwsr")]
+offset_left = -582.0
+offset_top = -449.0
+offset_right = 565.0
+offset_bottom = 317.0
+
+[node name="item_grid" type="GridContainer" parent="." index="10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 8
+columns = 22
+script = ExtResource("2_hw0o6")
+internal_object_size = 45.0
+
+[node name="item_slot" type="Control" parent="item_grid" index="0"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot2" type="Control" parent="item_grid" index="1"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot2" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot2" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot2" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot3" type="Control" parent="item_grid" index="2"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot3" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot3" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot3" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot4" type="Control" parent="item_grid" index="3"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot4" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot4" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot4" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot5" type="Control" parent="item_grid" index="4"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot5" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot5" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot5" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot6" type="Control" parent="item_grid" index="5"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot6" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot6" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot6" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot7" type="Control" parent="item_grid" index="6"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot7" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot7" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot7" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot8" type="Control" parent="item_grid" index="7"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot8" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot8" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot8" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot9" type="Control" parent="item_grid" index="8"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot9" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot9" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot9" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot10" type="Control" parent="item_grid" index="9"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot10" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot10" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot10" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot11" type="Control" parent="item_grid" index="10"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot11" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot11" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot11" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot12" type="Control" parent="item_grid" index="11"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot12" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot12" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot12" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot13" type="Control" parent="item_grid" index="12"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot13" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot13" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot13" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot14" type="Control" parent="item_grid" index="13"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot14" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot14" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot14" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot15" type="Control" parent="item_grid" index="14"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot15" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot15" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot15" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot16" type="Control" parent="item_grid" index="15"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot16" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot16" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot16" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot17" type="Control" parent="item_grid" index="16"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot17" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot17" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot17" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot18" type="Control" parent="item_grid" index="17"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot18" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot18" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot18" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot19" type="Control" parent="item_grid" index="18"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot19" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot19" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot19" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot20" type="Control" parent="item_grid" index="19"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot20" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot20" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot20" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot21" type="Control" parent="item_grid" index="20"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot21" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot21" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot21" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot22" type="Control" parent="item_grid" index="21"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot22" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot22" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot22" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot23" type="Control" parent="item_grid" index="22"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot23" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot23" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot23" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot24" type="Control" parent="item_grid" index="23"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot24" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot24" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot24" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot25" type="Control" parent="item_grid" index="24"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot25" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot25" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot25" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot26" type="Control" parent="item_grid" index="25"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot26" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot26" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot26" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot27" type="Control" parent="item_grid" index="26"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot27" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot27" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot27" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot28" type="Control" parent="item_grid" index="27"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot28" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot28" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot28" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_slot29" type="Control" parent="item_grid" index="28"]
+custom_minimum_size = Vector2(44.93, 45)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="item_grid/item_slot29" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="item_amount" type="RichTextLabel" parent="item_grid/item_slot29" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="item_grid/item_slot29" index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
