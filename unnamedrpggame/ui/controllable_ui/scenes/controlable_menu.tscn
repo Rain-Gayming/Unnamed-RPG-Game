@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=3 uid="uid://b25i31r51qafw"]
+
+[ext_resource type="Script" path="res://ui/controllable_ui/scripts/ControllableMenu.gd" id="1_7uupb"]
+[ext_resource type="PackedScene" uid="uid://fdwr4crkey1a" path="res://ui/controllable_ui/scenes/selector.tscn" id="2_ittry"]
+
+[node name="controlable_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.0
+offset_top = -264.0
+offset_right = 334.0
+offset_bottom = 236.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(300, 250)
+size_flags_horizontal = 6
+size_flags_vertical = 3
+script = ExtResource("1_7uupb")
+
+[node name="selector_drag" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_top = 30.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 1
+direction = 8
+menu = NodePath("..")
+
+[node name="selector_north" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 1
+direction = 0
+menu = NodePath("..")
+
+[node name="selector_east" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -30.0
+grow_horizontal = 0
+direction = 2
+menu = NodePath("..")
+
+[node name="selector_south" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+offset_top = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+direction = 4
+menu = NodePath("..")
+
+[node name="selector_west" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
+layout_mode = 1
+offset_right = 30.0
+menu = NodePath("..")
+
+[node name="selector_north_east" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -30.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 1
+direction = 1
+menu = NodePath("..")
+
+[node name="selector_south_east" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+offset_left = -30.0
+offset_top = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+direction = 3
+menu = NodePath("..")
+
+[node name="selector_south_west" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+offset_top = -30.0
+offset_right = 30.0
+grow_vertical = 0
+direction = 5
+menu = NodePath("..")
+
+[node name="selector_north_west" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
+layout_mode = 1
+anchors_preset = 0
+anchor_bottom = 0.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_vertical = 1
+direction = 7
+menu = NodePath("..")

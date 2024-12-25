@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://fdwr4crkey1a"]
+
+[ext_resource type="Script" path="res://ui/controllable_ui/scripts/Selector.gd" id="1_kma7p"]
+
+[node name="selector" type="Control" node_paths=PackedStringArray("debug_display")]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("1_kma7p")
+direction = 6
+debug_display = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
