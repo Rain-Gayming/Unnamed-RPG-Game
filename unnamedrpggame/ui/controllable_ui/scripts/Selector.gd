@@ -14,6 +14,7 @@ func _process(_delta):
 	if is_hovered:
 		if Input.is_action_just_pressed("left_mouse"):
 			menu.dragMenu(direction)
+			menu.set_on_top()
 	
 	if Input.is_action_just_released("left_mouse"):
 		menu.stopDrag()

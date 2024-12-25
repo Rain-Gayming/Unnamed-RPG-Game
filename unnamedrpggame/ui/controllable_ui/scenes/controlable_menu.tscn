@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b25i31r51qafw"]
+[gd_scene load_steps=4 format=3 uid="uid://b25i31r51qafw"]
 
 [ext_resource type="Script" path="res://ui/controllable_ui/scripts/ControllableMenu.gd" id="1_7uupb"]
 [ext_resource type="PackedScene" uid="uid://fdwr4crkey1a" path="res://ui/controllable_ui/scenes/selector.tscn" id="2_ittry"]
+[ext_resource type="Texture2D" uid="uid://d051r7snj2u0v" path="res://ui/ui_background.png" id="2_m8xda"]
 
 [node name="controlable_menu" type="Control"]
 layout_mode = 3
@@ -10,10 +11,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -266.0
-offset_top = -264.0
-offset_right = 334.0
-offset_bottom = 236.0
+offset_left = -576.0
+offset_top = -322.0
+offset_right = 577.0
+offset_bottom = 319.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(300, 250)
@@ -21,13 +22,57 @@ size_flags_horizontal = 6
 size_flags_vertical = 3
 script = ExtResource("1_7uupb")
 
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_m8xda")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Button" type="Button" parent="NinePatchRect"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = -11.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+action_mode = 0
+flat = true
+
 [node name="selector_drag" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 anchor_bottom = 0.0
-offset_top = 30.0
-offset_bottom = 60.0
+offset_top = 5.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 1
 direction = 8
@@ -38,7 +83,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 anchor_bottom = 0.0
-offset_bottom = 30.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 1
 direction = 0
@@ -49,7 +94,7 @@ layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -30.0
+offset_left = -5.0
 grow_horizontal = 0
 direction = 2
 menu = NodePath("..")
@@ -59,7 +104,7 @@ layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
-offset_top = -30.0
+offset_top = -5.0
 grow_horizontal = 2
 grow_vertical = 0
 direction = 4
@@ -67,7 +112,7 @@ menu = NodePath("..")
 
 [node name="selector_west" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
 layout_mode = 1
-offset_right = 30.0
+offset_right = 5.0
 menu = NodePath("..")
 
 [node name="selector_north_east" parent="." node_paths=PackedStringArray("menu") instance=ExtResource("2_ittry")]
@@ -76,8 +121,8 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 0.0
-offset_left = -30.0
-offset_bottom = 30.0
+offset_left = -5.0
+offset_bottom = 5.0
 grow_horizontal = 0
 grow_vertical = 1
 direction = 1
@@ -89,8 +134,8 @@ anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
-offset_left = -30.0
-offset_top = -30.0
+offset_left = -5.0
+offset_top = -5.0
 grow_horizontal = 0
 grow_vertical = 0
 direction = 3
@@ -100,8 +145,8 @@ menu = NodePath("..")
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
-offset_top = -30.0
-offset_right = 30.0
+offset_top = -5.0
+offset_right = 5.0
 grow_vertical = 0
 direction = 5
 menu = NodePath("..")
@@ -110,8 +155,10 @@ menu = NodePath("..")
 layout_mode = 1
 anchors_preset = 0
 anchor_bottom = 0.0
-offset_right = 30.0
-offset_bottom = 30.0
+offset_right = 5.0
+offset_bottom = 5.0
 grow_vertical = 1
 direction = 7
 menu = NodePath("..")
+
+[connection signal="pressed" from="NinePatchRect/Button" to="." method="set_on_top"]
