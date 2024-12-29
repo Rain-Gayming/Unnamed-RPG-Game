@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvp3n7tta2bqi"]
+
+[ext_resource type="Script" path="res://player/scripts/player_movement.gd" id="1_50kem"]
+[ext_resource type="Script" path="res://player/scripts/player_camera.gd" id="2_dlova"]
+[ext_resource type="Script" path="res://interacting/scripts/interaction_camera.gd" id="3_8s1im"]
+[ext_resource type="Script" path="res://interacting/scripts/interactable.gd" id="4_o36gq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_x6msp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_utnxf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6wul3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_86wrr"]
+
+[node name="world_one" type="Node3D"]
+
+[node name="floor" type="CSGMesh3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+use_collision = true
+mesh = SubResource("PlaneMesh_x6msp")
+
+[node name="player" type="CharacterBody3D" parent="."]
+script = ExtResource("1_50kem")
+current_speed = 8.0
+jump_height = 8.0
+acceleration = 16.0
+
+[node name="camera_holder" type="Node3D" parent="player" node_paths=PackedStringArray("player_body")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
+script = ExtResource("2_dlova")
+player_body = NodePath("..")
+
+[node name="camera" type="Camera3D" parent="player/camera_holder" node_paths=PackedStringArray("raycast")]
+fov = 88.5933
+near = 0.001
+script = ExtResource("3_8s1im")
+reach_distance = 15.0
+raycast = NodePath("raycast")
+
+[node name="raycast" type="RayCast3D" parent="player/camera_holder/camera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+collide_with_areas = true
+
+[node name="collider" type="CollisionShape3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_utnxf")
+
+[node name="mesh" type="MeshInstance3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_6wul3")
+
+[node name="interactable" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -4)
+use_collision = true
+mesh = SubResource("BoxMesh_86wrr")
+script = ExtResource("4_o36gq")

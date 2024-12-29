@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://fdwr4crkey1a"]
 
-[ext_resource type="Script" path="res://ui/controllable_ui/scripts/Selector.gd" id="1_kma7p"]
+[ext_resource type="Script" path="res://ui/controllable_ui/scripts/menu_selector.gd" id="1_kma7p"]
 
 [node name="selector" type="Control" node_paths=PackedStringArray("debug_display")]
 layout_mode = 3

@@ -8,9 +8,6 @@ extends Node
 @export var item_icon: TextureRect
 @export var item_amount: RichTextLabel
 
-func _ready():
-	update_slot()
-
 func update_slot():
 	if item == null or item.current_amount <= 0 or item.current_item == null:
 		self.queue_free()

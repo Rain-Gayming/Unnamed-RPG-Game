@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BaseItem" load_steps=2 format=3 uid="uid://u1hfc5fxgav2"]
+
+[ext_resource type="Script" path="res://ui/inventory/scripts/base_item_resource.gd" id="1_ur05l"]
+
+[resource]
+script = ExtResource("1_ur05l")
+item_name = ""
+item_description = ""
+can_stack = false

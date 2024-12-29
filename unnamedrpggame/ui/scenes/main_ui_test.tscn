@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dh8twu4jr1bw8"]
 
 [ext_resource type="PackedScene" uid="uid://b25i31r51qafw" path="res://ui/controllable_ui/scenes/controlable_menu.tscn" id="1_05mbn"]
-[ext_resource type="Script" path="res://ui/MenuManager.gd" id="1_beql3"]
+[ext_resource type="Script" path="res://ui/menu_manager.gd" id="1_beql3"]
 [ext_resource type="PackedScene" uid="uid://y6volqeh44bh" path="res://ui/inventory/scenes/inventory.tscn" id="3_b6bqi"]
 
 [node name="MainUiTest" type="Control" node_paths=PackedStringArray("menus")]
