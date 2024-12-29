@@ -30,10 +30,10 @@ func add_item(item_to_add: InventoryItem):
 		var item_index = items.find(item_to_add.current_item)
 
 		add_existing_item(item_to_add.current_amount, item_index)
-		return
 	else:
 		add_new_item(item_to_add)
-		return
+
+	item_to_add = null
 
 #combines the amounts together
 #then updates the slots
@@ -41,6 +41,7 @@ func add_existing_item(item_to_add: int, index: int):
 	inventory_items[index].current_amount += item_to_add
 	print("item " + items[index].item_name + " already exists combining the amounts to: " + str(inventory_items[index].current_amount))
 	inventory_ui.add_existing_item(index)
+	pass
 
 #creates a new item slot,
 #sets the item in the slot to the new one
