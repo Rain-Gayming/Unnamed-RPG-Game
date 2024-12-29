@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 UiDirections="*res://ui/controllable_ui/ui_directions.gd"
 Settings="*res://game/scripts/settings.gd"
 CursorManager="*res://game/scripts/cursor_manager.gd"
+SignalManager="*res://game/scripts/signal_manager.gd"
 
 [display]
 

@@ -1,20 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://y6volqeh44bh"]
+[gd_scene load_steps=6 format=3 uid="uid://y6volqeh44bh"]
 
-[ext_resource type="Script" path="res://ui/controllable_ui/scripts/controllable_menu.gd" id="1_b3frw"]
+[ext_resource type="Script" path="res://ui/inventory/scripts/inventory_ui.gd" id="1_83jvx"]
 [ext_resource type="Script" path="res://ui/variable_grid_columns.gd" id="2_hw0o6"]
 [ext_resource type="Texture2D" uid="uid://d051r7snj2u0v" path="res://ui/ui_background.png" id="2_nwacc"]
 [ext_resource type="PackedScene" uid="uid://fdwr4crkey1a" path="res://ui/controllable_ui/scenes/selector.tscn" id="3_0j40y"]
 [ext_resource type="PackedScene" uid="uid://bxtn0gk0ey7ph" path="res://ui/inventory/scenes/item_slot.tscn" id="3_rrcyy"]
-[ext_resource type="Script" path="res://ui/inventory/scripts/inventory.gd" id="6_tupjg"]
-[ext_resource type="Resource" uid="uid://u1hfc5fxgav2" path="res://ui/inventory/items/new_resource.tres" id="7_mkq6c"]
-[ext_resource type="Script" path="res://ui/inventory/scripts/inventory_item.gd" id="8_pe4my"]
 
-[sub_resource type="Resource" id="Resource_4ewau"]
-script = ExtResource("8_pe4my")
-current_item = ExtResource("7_mkq6c")
-current_amount = 4
-
-[node name="inventory" type="Control"]
+[node name="inventory" type="Control" node_paths=PackedStringArray("item_grid")]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -30,7 +22,9 @@ grow_vertical = 2
 pivot_offset = Vector2(300, 250)
 size_flags_horizontal = 6
 size_flags_vertical = 3
-script = ExtResource("1_b3frw")
+script = ExtResource("1_83jvx")
+item_slot = ExtResource("3_rrcyy")
+item_grid = NodePath("item_grid")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 1
@@ -187,19 +181,5 @@ theme_override_constants/h_separation = 8
 columns = 22
 script = ExtResource("2_hw0o6")
 internal_object_size = 45.0
-
-[node name="item_slot" parent="item_grid" instance=ExtResource("3_rrcyy")]
-layout_mode = 2
-
-[node name="inventory" type="Control" parent="." node_paths=PackedStringArray("item_grid")]
-anchors_preset = 0
-offset_top = -1.0
-offset_right = 40.0
-offset_bottom = 39.0
-mouse_filter = 2
-script = ExtResource("6_tupjg")
-item_slot = ExtResource("3_rrcyy")
-item_grid = NodePath("../item_grid")
-debug_item = SubResource("Resource_4ewau")
 
 [connection signal="pressed" from="NinePatchRect/Button" to="." method="set_on_top"]

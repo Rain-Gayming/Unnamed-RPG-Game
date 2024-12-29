@@ -11,4 +11,4 @@ func _process(_delta: float):
 		if raycast.is_colliding():
 			var hit = raycast.get_collider()
 			if hit.has_method("interact"):
-				print("^-^")
+				hit.interact()

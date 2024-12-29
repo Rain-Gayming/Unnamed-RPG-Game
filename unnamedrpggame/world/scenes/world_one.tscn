@@ -1,9 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvp3n7tta2bqi"]
+[gd_scene load_steps=16 format=3 uid="uid://cvp3n7tta2bqi"]
 
 [ext_resource type="Script" path="res://player/scripts/player_movement.gd" id="1_50kem"]
 [ext_resource type="Script" path="res://player/scripts/player_camera.gd" id="2_dlova"]
 [ext_resource type="Script" path="res://interacting/scripts/interaction_camera.gd" id="3_8s1im"]
-[ext_resource type="Script" path="res://interacting/scripts/interactable.gd" id="4_o36gq"]
+[ext_resource type="Script" path="res://interacting/scripts/item_pickup.gd" id="4_1k6pu"]
+[ext_resource type="Resource" uid="uid://u1hfc5fxgav2" path="res://ui/inventory/items/new_resource.tres" id="5_3qb0o"]
+[ext_resource type="Script" path="res://ui/inventory/scripts/inventory_item.gd" id="6_q83id"]
+[ext_resource type="PackedScene" uid="uid://crl3kfuuyud7" path="res://ui/scenes/player_ui.tscn" id="7_e6l55"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x83y2"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_b1dc8"]
+sky_material = SubResource("ProceduralSkyMaterial_x83y2")
+
+[sub_resource type="Environment" id="Environment_ub5ah"]
+background_mode = 2
+sky = SubResource("Sky_b1dc8")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_x6msp"]
 
@@ -13,7 +29,19 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_86wrr"]
 
+[sub_resource type="Resource" id="Resource_3tb3j"]
+script = ExtResource("6_q83id")
+current_item = ExtResource("5_3qb0o")
+current_amount = 2
+
 [node name="world_one" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ub5ah")
 
 [node name="floor" type="CSGMesh3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
@@ -51,7 +79,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_6wul3")
 
 [node name="interactable" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -4)
+use_collision = true
+mesh = SubResource("BoxMesh_86wrr")
+script = ExtResource("4_1k6pu")
+item = SubResource("Resource_3tb3j")
+
+[node name="interactable2" type="CSGMesh3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -4)
 use_collision = true
 mesh = SubResource("BoxMesh_86wrr")
-script = ExtResource("4_o36gq")
+script = ExtResource("4_1k6pu")
+item = SubResource("Resource_3tb3j")
+
+[node name="interactable3" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -4)
+use_collision = true
+mesh = SubResource("BoxMesh_86wrr")
+script = ExtResource("4_1k6pu")
+item = SubResource("Resource_3tb3j")
+
+[node name="player_ui" parent="." instance=ExtResource("7_e6l55")]
