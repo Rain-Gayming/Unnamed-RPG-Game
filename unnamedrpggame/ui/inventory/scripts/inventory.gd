@@ -21,19 +21,24 @@ func debug_add():
 	add_item(debug_item)
 
 func add_item(item_to_add: InventoryItem):
+	#this removes a weird bug of items adding multiplicatively
+	#1, 2, 4, 8, 16, 32, ect
+	var n_item_to_add = InventoryItem.new()
+	n_item_to_add.current_amount = item_to_add.current_amount
+	n_item_to_add.current_item = item_to_add.current_item
+	
 	print("adding item")
 	#does the container have the item?
 	#if yes then add the amount
 	#if no then add a new slot
-	if items.has(item_to_add.current_item):
+	if items.has(n_item_to_add.current_item):
 		#gets the items index
-		var item_index = items.find(item_to_add.current_item)
+		var item_index = items.find(n_item_to_add.current_item)
 
-		add_existing_item(item_to_add.current_amount, item_index)
+		add_existing_item(n_item_to_add.current_amount, item_index)
 	else:
-		add_new_item(item_to_add)
+		add_new_item(n_item_to_add)
 
-	item_to_add = null
 
 #combines the amounts together
 #then updates the slots
