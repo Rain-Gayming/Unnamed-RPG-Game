@@ -1,10 +1,60 @@
-[gd_scene load_steps=3 format=3 uid="uid://crl3kfuuyud7"]
+[gd_scene load_steps=5 format=3 uid="uid://crl3kfuuyud7"]
 
-[ext_resource type="PackedScene" uid="uid://dh8twu4jr1bw8" path="res://ui/scenes/main_ui_test.tscn" id="1_ixp4u"]
+[ext_resource type="Script" path="res://ui/menu_manager.gd" id="1_d28io"]
 [ext_resource type="Script" path="res://ui/inventory/scripts/player_inventory.gd" id="2_ff43d"]
+[ext_resource type="PackedScene" uid="uid://b25i31r51qafw" path="res://ui/controllable_ui/scenes/controlable_menu.tscn" id="3_5dgi3"]
+[ext_resource type="PackedScene" uid="uid://y6volqeh44bh" path="res://ui/inventory/scenes/inventory.tscn" id="4_2qscx"]
 
-[node name="player_ui" instance=ExtResource("1_ixp4u")]
+[node name="player_ui" type="Control" node_paths=PackedStringArray("menus", "visual_controller")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d28io")
+menus = [NodePath("visual_controller/inventory"), NodePath("visual_controller/sheet"), NodePath("visual_controller/magic"), NodePath("visual_controller/map")]
+visual_controller = NodePath("visual_controller")
+toggle_key = "ui_tab"
 
-[node name="inventorys" type="Node" parent="." index="4" node_paths=PackedStringArray("inventory_ui")]
+[node name="inventorys" type="Node" parent="." node_paths=PackedStringArray("inventory_ui")]
 script = ExtResource("2_ff43d")
-inventory_ui = NodePath("../inventory")
+inventory_ui = NodePath("../visual_controller/inventory")
+
+[node name="visual_controller" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="sheet" parent="visual_controller" node_paths=PackedStringArray("menu_manager") instance=ExtResource("3_5dgi3")]
+layout_mode = 1
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 417.0
+offset_bottom = 565.0
+menu_manager = NodePath("../..")
+
+[node name="magic" parent="visual_controller" node_paths=PackedStringArray("menu_manager") instance=ExtResource("3_5dgi3")]
+layout_mode = 1
+offset_left = 1300.0
+offset_top = 565.0
+offset_right = 1900.0
+offset_bottom = 1060.0
+menu_manager = NodePath("../..")
+
+[node name="map" parent="visual_controller" node_paths=PackedStringArray("menu_manager") instance=ExtResource("3_5dgi3")]
+layout_mode = 1
+offset_left = 418.0
+offset_top = -20.0
+offset_right = 1900.0
+offset_bottom = 565.0
+menu_manager = NodePath("../..")
+
+[node name="inventory" parent="visual_controller" node_paths=PackedStringArray("menu_manager") instance=ExtResource("4_2qscx")]
+layout_mode = 1
+offset_left = -20.0
+offset_top = 565.0
+offset_right = 1300.0
+offset_bottom = 1060.0
+menu_manager = NodePath("../..")
