@@ -25,6 +25,7 @@ CursorManager="*res://game/scripts/cursor_manager.gd"
 SignalManager="*res://game/scripts/signal_manager.gd"
 GameManager="*res://game/scripts/game_manager.gd"
 MovementType="*res://player/scripts/movement_type.gd"
+StatsEnum="*res://entities/stats/scripts/stats_enum.gd"
 
 [display]
 

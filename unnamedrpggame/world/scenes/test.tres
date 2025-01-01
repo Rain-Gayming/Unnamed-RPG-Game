@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Class" load_steps=11 format=3 uid="uid://bi0did0dxaqir"]
+
+[ext_resource type="Resource" uid="uid://bgx1n2yb4bbw0" path="res://entities/stats/skills/magic/skill_alteration_magic.tres" id="1_gt6vl"]
+[ext_resource type="Resource" uid="uid://dykkq7t03vnxu" path="res://entities/stats/skills/stealth/skill_sneaking_stealth.tres" id="2_p7uf5"]
+[ext_resource type="Resource" uid="uid://d1ek3r5co5txs" path="res://entities/stats/skills/magic/skill_corruption_magic.tres" id="3_qskxg"]
+[ext_resource type="Resource" uid="uid://geibi1uikywm" path="res://entities/stats/skills/magic/skill_elemental_magic.tres" id="4_0qbe8"]
+[ext_resource type="Resource" uid="uid://cqhjpatio0jre" path="res://entities/stats/skills/magic/skill_enchanting_magic.tres" id="5_4y58r"]
+[ext_resource type="Resource" uid="uid://raeq2uax6qji" path="res://entities/stats/skills/stealth/skill_light_armour.tres" id="6_6u550"]
+[ext_resource type="Resource" uid="uid://bo72643qk3qip" path="res://entities/stats/skills/magic/skill_medium_armour.tres" id="7_5t3qj"]
+[ext_resource type="Resource" uid="uid://havs8gcchaou" path="res://entities/stats/skills/magic/skill_purity_magic.tres" id="8_7u6ih"]
+[ext_resource type="Resource" uid="uid://dahrnctcb1rvb" path="res://entities/stats/skills/magic/skill_ritual_magic.tres" id="9_6j3mc"]
+[ext_resource type="Script" path="res://entities/stats/scripts/class.gd" id="10_cb4cv"]
+
+[resource]
+script = ExtResource("10_cb4cv")
+level = 0
+ritual_magic = ExtResource("9_6j3mc")
+elemental_magic = ExtResource("4_0qbe8")
+purity_magic = ExtResource("8_7u6ih")
+alteration_magic = ExtResource("1_gt6vl")
+corruption_magic = ExtResource("3_qskxg")
+enchanting_magic = ExtResource("5_4y58r")
+medium_armour = ExtResource("7_5t3qj")
+spear_weapons = ExtResource("2_p7uf5")
+long_blade_weapons = ExtResource("2_p7uf5")
+blunt_weapons = ExtResource("2_p7uf5")
+sharp_weapons = ExtResource("2_p7uf5")
+marksman_weapons = ExtResource("2_p7uf5")
+heavy_armour = ExtResource("2_p7uf5")
+sneaking_stealth = ExtResource("2_p7uf5")
+slight_of_hand_stealth = ExtResource("2_p7uf5")
+poisoning_stealth = ExtResource("2_p7uf5")
+throwing_weapons = ExtResource("2_p7uf5")
+short_blade_weapons = ExtResource("2_p7uf5")
+persuasion_charisma = ExtResource("2_p7uf5")
+light_armour = ExtResource("6_6u550")

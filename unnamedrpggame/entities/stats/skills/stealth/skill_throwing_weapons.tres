@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://dykkq7t03vnxu"]
+
+[ext_resource type="Script" path="res://entities/stats/scripts/skill.gd" id="1_3rsag"]
+
+[resource]
+script = ExtResource("1_3rsag")
+level = 5
+is_major = false
+is_minor = false
+related_attribute = 0
+stat_type = 0

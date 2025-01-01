@@ -1,8 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://cvp3n7tta2bqi"]
+[gd_scene load_steps=19 format=3 uid="uid://cvp3n7tta2bqi"]
 
 [ext_resource type="Script" path="res://player/scripts/player_movement.gd" id="1_50kem"]
 [ext_resource type="Script" path="res://player/scripts/player_camera.gd" id="2_dlova"]
+[ext_resource type="Script" path="res://entities/stats/scripts/stat_manager.gd" id="2_vd3lc"]
 [ext_resource type="Script" path="res://interacting/scripts/interaction_camera.gd" id="3_8s1im"]
+[ext_resource type="Resource" uid="uid://bi0did0dxaqir" path="res://world/scenes/test.tres" id="3_mbfiq"]
 [ext_resource type="Script" path="res://interacting/scripts/item_pickup.gd" id="4_1k6pu"]
 [ext_resource type="Resource" uid="uid://u1hfc5fxgav2" path="res://ui/inventory/items/new_resource.tres" id="5_3qb0o"]
 [ext_resource type="Script" path="res://ui/inventory/scripts/inventory_item.gd" id="6_q83id"]
@@ -63,6 +65,10 @@ sprint_speed = 8.0
 crouch_speed = 2.0
 acceleration = 16.0
 jump_height = 3.5
+
+[node name="stat_manager" type="Node3D" parent="player"]
+script = ExtResource("2_vd3lc")
+my_class = ExtResource("3_mbfiq")
 
 [node name="camera_holder" type="Node3D" parent="player" node_paths=PackedStringArray("player_body")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
