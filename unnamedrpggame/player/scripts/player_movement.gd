@@ -1,5 +1,10 @@
 extends CharacterBody3D
 
+@export_group("references")
+@export var camera_holder: Node3D
+@export var standing_collider: CollisionShape3D
+@export var crouching_collider: CollisionShape3D
+
 @export_group("ground movement")
 @export var current_speed: float
 @export var walk_speed: float
@@ -52,8 +57,11 @@ func inputs():
 func ground_movement(delta: float):
 	var input_direction = Input.get_vector("movement_left", "movement_right", "movement_forward", "movement_back")
 	var direction = (transform.basis * Vector3(input_direction.x, 0, input_direction.y)).normalized()
+
+	#slows down the player when moving backwards
 	if input_direction.y < 0.001:
 		if direction:
+			#the quartering is so the player is slower moving left and right
 			velocity.x = lerp(velocity.x, (direction.x * current_speed) / 1.5, acceleration * delta)
 			velocity.z = lerp(velocity.z, direction.z * current_speed, acceleration * delta)
 		else:
@@ -83,3 +91,13 @@ func change_movement_type(type: MovementType.Movement):
 		#crouching
 		MovementType.Movement.crouching:
 			current_speed = crouch_speed
+	
+	#lowers the camera when crouching
+	if type == MovementType.Movement.crouching:
+		camera_holder.position.y = 1
+		standing_collider.disabled = false
+		crouching_collider.disabled = true
+	else:
+		camera_holder.position.y = 1.75
+		standing_collider.disabled = true
+		crouching_collider.disabled = false
