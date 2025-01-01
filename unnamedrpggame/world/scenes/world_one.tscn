@@ -62,7 +62,7 @@ run_speed = 6.0
 sprint_speed = 8.0
 crouch_speed = 2.0
 acceleration = 16.0
-jump_height = 8.0
+jump_height = 3.5
 
 [node name="camera_holder" type="Node3D" parent="player" node_paths=PackedStringArray("player_body")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
