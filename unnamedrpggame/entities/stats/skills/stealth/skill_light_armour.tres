@@ -10,3 +10,5 @@ is_major = false
 is_minor = false
 related_attribute = 1
 stat_type = 1
+experience = 0.0
+exp_to_level = 100.0

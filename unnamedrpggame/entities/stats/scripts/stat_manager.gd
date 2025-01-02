@@ -22,9 +22,29 @@ extends Node
 func _ready():
     make_stats_unique()
 
+func _process(delta):
+    if Input.is_action_just_pressed("debug_add_exp"):
+        add_exp_to_skill(StatsEnum.Skills.ritual_magic, 15)
 
 #this lets me customise stats per class for SOME reason
 func make_stats_unique():
+    var u_strength = strength.duplicate()
+    strength = u_strength
+    var u_endurance = endurance.duplicate()
+    endurance = u_endurance
+    var u_speed = speed.duplicate()
+    speed = u_speed
+    var u_inteligence = inteligence.duplicate()
+    inteligence = u_inteligence
+    var u_wisdom = wisdom.duplicate()
+    wisdom = u_wisdom
+    var u_willpower = willpower.duplicate()
+    willpower = u_willpower
+    var u_personality = personality.duplicate()
+    personality = u_personality
+    var u_agility = agility.duplicate()
+    agility = u_agility
+
     var u_class: Class = my_class.duplicate()
 
     var u_rm = my_class.ritual_magic.duplicate()
@@ -136,7 +156,7 @@ func add_exp_to_skill(skill: StatsEnum.Skills, amount: float):
 
 func add_level_up_points():
     level_up_points += 1
-    
+
     if level_up_points >= level_up_points_needed:
         can_level_up = true
 

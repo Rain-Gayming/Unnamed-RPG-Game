@@ -4,8 +4,10 @@
 
 [resource]
 script = ExtResource("1_wvqx0")
-level = 430
+level = 5
 is_major = false
 is_minor = false
 related_attribute = 3
 stat_type = 0
+experience = 0.0
+exp_to_level = 100.0

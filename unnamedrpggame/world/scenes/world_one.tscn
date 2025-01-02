@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://cvp3n7tta2bqi"]
+[gd_scene load_steps=28 format=3 uid="uid://cvp3n7tta2bqi"]
 
 [ext_resource type="Script" path="res://player/scripts/player_movement.gd" id="1_50kem"]
 [ext_resource type="Script" path="res://player/scripts/player_camera.gd" id="2_dlova"]
 [ext_resource type="Script" path="res://entities/stats/scripts/stat_manager.gd" id="2_vd3lc"]
+[ext_resource type="Script" path="res://entities/stats/scripts/attribute.gd" id="3_04nww"]
 [ext_resource type="Script" path="res://interacting/scripts/interaction_camera.gd" id="3_8s1im"]
 [ext_resource type="Resource" uid="uid://bi0did0dxaqir" path="res://world/scenes/test.tres" id="3_mbfiq"]
 [ext_resource type="Script" path="res://interacting/scripts/item_pickup.gd" id="4_1k6pu"]
@@ -24,6 +25,62 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_x6msp"]
+
+[sub_resource type="Resource" id="Resource_uaqub"]
+script = ExtResource("3_04nww")
+attribute = 0
+level = 0
+is_favoured = false
+level_points = 0
+
+[sub_resource type="Resource" id="Resource_ri85l"]
+script = ExtResource("3_04nww")
+attribute = 1
+level = 0
+is_favoured = false
+level_points = 0
+
+[sub_resource type="Resource" id="Resource_pqfao"]
+script = ExtResource("3_04nww")
+attribute = 2
+level = 0
+is_favoured = false
+level_points = 0
+
+[sub_resource type="Resource" id="Resource_nyj0o"]
+script = ExtResource("3_04nww")
+attribute = 3
+level = 0
+is_favoured = true
+level_points = 0
+
+[sub_resource type="Resource" id="Resource_twpg1"]
+script = ExtResource("3_04nww")
+attribute = 4
+level = 0
+is_favoured = false
+level_points = 0
+
+[sub_resource type="Resource" id="Resource_bdmk8"]
+script = ExtResource("3_04nww")
+attribute = 5
+level = 0
+is_favoured = false
+level_points = 0
+
+[sub_resource type="Resource" id="Resource_m0ijk"]
+script = ExtResource("3_04nww")
+attribute = 6
+level = 0
+is_favoured = false
+level_points = 0
+
+[sub_resource type="Resource" id="Resource_lq7lo"]
+script = ExtResource("3_04nww")
+attribute = 7
+level = 0
+is_favoured = false
+level_points = 0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o78fv"]
 
@@ -68,6 +125,14 @@ jump_height = 3.5
 
 [node name="stat_manager" type="Node3D" parent="player"]
 script = ExtResource("2_vd3lc")
+strength = SubResource("Resource_uaqub")
+endurance = SubResource("Resource_ri85l")
+speed = SubResource("Resource_pqfao")
+inteligence = SubResource("Resource_nyj0o")
+wisdom = SubResource("Resource_twpg1")
+willpower = SubResource("Resource_bdmk8")
+personality = SubResource("Resource_m0ijk")
+agility = SubResource("Resource_lq7lo")
 my_class = ExtResource("3_mbfiq")
 
 [node name="camera_holder" type="Node3D" parent="player" node_paths=PackedStringArray("player_body")]
