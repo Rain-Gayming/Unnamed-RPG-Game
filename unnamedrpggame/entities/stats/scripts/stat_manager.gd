@@ -22,9 +22,12 @@ extends Node
 func _ready():
     make_stats_unique()
 
-func _process(delta):
-    if Input.is_action_just_pressed("debug_add_exp"):
-        add_exp_to_skill(StatsEnum.Skills.ritual_magic, 15)
+func _process(_delta):
+    pass
+    
+    #debug code
+    #if Input.is_action_just_pressed("debug_add_exp"):
+    #    add_exp_to_skill(StatsEnum.Skills.ritual_magic, 15)
 
 #this lets me customise stats per class for SOME reason
 func make_stats_unique():
