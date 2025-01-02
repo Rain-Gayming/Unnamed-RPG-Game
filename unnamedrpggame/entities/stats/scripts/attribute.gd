@@ -4,5 +4,4 @@ extends Resource
 @export var attribute: StatsEnum.Attribute
 @export var level: int
 @export var is_favoured: bool
-@export var experience: float
-@export var exp_to_level: float
+@export var level_points: int
